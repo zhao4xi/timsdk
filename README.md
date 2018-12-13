@@ -29,15 +29,15 @@
    }
 ```
 
-###方法介绍
+### 方法介绍
 
 所有的方法都通过TimSdkService进行调用
 
-#####生成Sign
+##### 生成Sign
 1. 生成用户Sign<br/>
 `String generateSig(String userID)`
 
-#####账号管理
+##### 账号管理
 1. 独立模式帐号导入  v4/im_open_login_svc/account_import<br/>
 `AccountImportResponse accountImport(AccountImportRequest request);`<br/>
 2. 独立模式帐号批量导入 v4/im_open_login_svc/multiaccount_import<br/>
@@ -48,7 +48,7 @@
 `接口作废`
 
 
-#####单聊消息
+##### 单聊消息
 1. 单发单聊消息<br/>
 `AccountImportResponse accountImport(AccountImportRequest request);`<br/>
 2. 批量发单聊消息<br/>
@@ -57,7 +57,7 @@
 `AccountExpiredResponse accountExpired(AccountExpiredRequest request);`
 
  
-#####群组管理
+##### 群组管理
 1. 获取APP中的所有群组	v4/group_open_http_svc/get_appid_group_list    <br/>
 `GetAppIdGroupListResponse GroupGetListByAppId(GetAppIdGroupListRequest request);`                            
 2. 创建群组	v4/group_open_http_svc/create_group <br/>
@@ -103,13 +103,13 @@
 22. 拉取群漫游消息	v4/group_open_http_svc/group_msg_get_simple   <br/>
 `GroupMsgGetSimpleResponse groupMsgGetSimple(GroupMsgGetSimpleRequest request) ;`
 
-#####资料管理
+##### 资料管理
 1. 拉取资料 v4/profile/portrait_get<br/>
 `PortraitSetResponse portraitSet(PortraitSetRequest request);`
 2. 设置资料 v4/profile/portrait_set<br/>	
 `PortraitGetResponse portraitGet(PortraitGetRequest request);`
 
-#####关系链管理
+##### 关系链管理
 1. 添加好友	v4/sns/friend_add <br/>
 `FriendAddResponse friendAdd(FriendAddRequest request);`
 2. 导入好友	v4/sns/friend_import<br/>
@@ -139,7 +139,7 @@
 14. 更新好友	v4/sns/friend_update<br/>
 `FriendUpdateResponse friendUpdate(FriendUpdateRequest request);`
 
-#####脏字管理
+##### 脏字管理
 1. 查询脏字	v4/openim_dirty_words/get<br/>
 `DirtyWordsGetResponse dirtyWordsGet(DirtyWordsGetRequest request);`
 2. 添加脏字	v4/openim_dirty_words/add<br/>
@@ -148,23 +148,23 @@
 `DirtyWordsDeleteResponse dirtyWordsDelete(DirtyWordsDeleteRequest request);`
 
 
-#####数据下载
+##### 数据下载
 1. 消息记录下载	v4/open_msg_svc/get_history<br/>
 `GetHistoryResponse getHistory(GetHistoryRequest request);`
 
-#####在线状态
+##### 在线状态
 1. 获取用户在线状态	v4/openim/querystate<br/>
 `QueryStateResponse queryState(QueryStateRequest request);`
 
-#####全局禁言管理
+##### 全局禁言管理
 1. 设置全局禁言	v4/openconfigsvr/setnospeaking<br/>
 `SetNoSpeakingResponse setNoSpeaking(SetNoSpeakingRequest request);`
 2. 查询全局禁言	v4/openconfigsvr/getnospeaking<br/>
 `GetNoSpeakingResponse getNoSpeaking(GetNoSpeakingRequest request);`
 
-####未实现接口:
+#### 未实现接口:
 
-#####消息推送
+##### 消息推送
 1. 推送	v4/openim/im_push<br />
 2. 获取推送报告	v4/openim/im_get_push_report<br />
 3. 设置应用属性名称	v4/openim/im_set_attr_name<br />
@@ -177,5 +177,5 @@
 10. 删除用户所有标签 v4/openim/im_remove_tag_all<br />
 
 
-#####消息推送回调
+##### 消息推送回调
 计划1.1 版本提交
