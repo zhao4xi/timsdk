@@ -21,9 +21,13 @@ public abstract class ResponseBase {
     /**
      * 请求是否成功
      * 请求成功不代表子业务执行成功
+     *
      * @return true 请求成功, false 请求失败
      */
     public boolean getSuccess() {
+        if (ActionStatus == null) {
+            return ErrorCode == 0;
+        }
         return ActionStatus.equals("OK");
-    } 
+    }
 }

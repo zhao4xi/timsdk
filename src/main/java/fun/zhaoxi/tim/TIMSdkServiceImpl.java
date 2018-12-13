@@ -1,14 +1,13 @@
 package fun.zhaoxi.tim;
 
 import com.tls.tls_sigature.tls_sigature;
+import fun.zhaoxi.tim.models.openconfig.*;
 import fun.zhaoxi.tim.models.opengroup.*;
-import fun.zhaoxi.tim.models.openim.BatchSendMsgRequest;
-import fun.zhaoxi.tim.models.openim.BatchSendMsgResponse;
-import fun.zhaoxi.tim.models.openim.SendMsgRequest;
-import fun.zhaoxi.tim.models.openim.SendMsgResponse;
+import fun.zhaoxi.tim.models.openim.*;
+import fun.zhaoxi.tim.models.openimdirtywords.*;
 import fun.zhaoxi.tim.models.openlogin.*;
-import fun.zhaoxi.tim.models.profile.PortraitSetRequest;
-import fun.zhaoxi.tim.models.profile.PortraitSetResponse;
+import fun.zhaoxi.tim.models.openmsg.*;
+import fun.zhaoxi.tim.models.profile.*;
 import fun.zhaoxi.tim.models.sns.*;
 
 public class TIMSdkServiceImpl implements TIMSdkService {
@@ -32,13 +31,17 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         return timClient.execute(request);
     }
 
-    public ImportGroupMemberResponse ImportGroupMember(ImportGroupMemberRequest request) {
+    public GetGroupMemberInfoResponse GetGroupMemberInfo(GetGroupMemberInfoRequest request) {
         return timClient.execute(request);
     }
 
+
     public BatchSendMsgResponse BatchSendMsg(BatchSendMsgRequest request) {
         return timClient.execute(request);
+    }
 
+    public ImportMsgResponse ImportMsg(ImportMsgRequest request) {
+        return timClient.execute(request);
     }
 
     public SendMsgResponse SendMsg(SendMsgRequest request) {
@@ -49,15 +52,19 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         return timClient.execute(request);
     }
 
-    public PortraitSetResponse PortraitSet(PortraitSetRequest request) {
+    public PortraitSetResponse portraitSet(PortraitSetRequest request) {
         return timClient.execute(request);
     }
 
-    public FriendUpdateResponse FriendUpdate(FriendUpdateRequest request) {
+    public PortraitGetResponse portraitGet(PortraitGetRequest request) {
         return timClient.execute(request);
     }
 
-    public FriendDeleteResponse FriendDelete(FriendDeleteRequest request) {
+    public FriendUpdateResponse friendUpdate(FriendUpdateRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendDeleteResponse friendDelete(FriendDeleteRequest request) {
         return timClient.execute(request);
     }
 
@@ -74,6 +81,10 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         return timClient.execute(request);
     }
 
+    public GetAppIdGroupListResponse GroupGetListByAppId(GetAppIdGroupListRequest request) {
+        return timClient.execute(request);
+    }
+
     public GroupCreateResponse GroupCreate(GroupCreateRequest request) {
         return timClient.execute(request);
     }
@@ -82,17 +93,75 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         return timClient.execute(request);
     }
 
-    public GroupAddMemberResponse GrouAddMember(GroupAddMemberRequest request) {
+
+    public GetJoinedGroupListResponse GetJoinedGroupList(GetJoinedGroupListRequest request) {
         return timClient.execute(request);
     }
 
-    public FriendAddResponse FriendAdd(FriendAddRequest request) {
+    public GetRoleInGroupResponse GetRoleInGroup(GetRoleInGroupRequest request) {
+        return timClient.execute(request);
+    }
+
+    public ForbidSendMsgResponse ForbidSendMsg(ForbidSendMsgRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GetGroupShuttedUinResponse GetGroupShuttedUin(GetGroupShuttedUinRequest request) {
         return timClient.execute(request);
     }
 
     public GroupAddMemberResponse GroupAddMember(GroupAddMemberRequest request) {
         return timClient.execute(request);
     }
+
+    public FriendAddResponse friendAdd(FriendAddRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendImportResponse friendImport(FriendImportRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendDeleteAllResponse friendDeleteAll(FriendDeleteAllRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendCheckResponse friendCheck(FriendCheckRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendGetAllResponse friendGetAll(FriendGetAllRequest request) {
+        return timClient.execute(request);
+    }
+
+    public FriendGetListResponse friendGetList(FriendGetListRequest request) {
+        return timClient.execute(request);
+    }
+
+    public BlackListAddResponse blackListAdd(BlackListAddRequest request) {
+        return timClient.execute(request);
+    }
+
+    public BlackListDeleteResponse blackListDelete(BlackListDeleteRequest request) {
+        return timClient.execute(request);
+    }
+
+    public BlackListGetResponse blackListGet(BlackListGetRequest request) {
+        return timClient.execute(request);
+    }
+
+    public BlackListCheckResponse blackListCheck(BlackListCheckRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GroupAddResponse groupAdd(GroupAddRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GroupDeleteResponse groupDelete(GroupDeleteRequest request) {
+        return timClient.execute(request);
+    }
+
 
     public ModifyGroupMemberInfoResponse ModifyGroupMemberInfo(ModifyGroupMemberInfoRequest request) {
         return timClient.execute(request);
@@ -106,7 +175,65 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         return timClient.execute(request);
     }
 
+    public ChangeGroupOwnerResponse ChangeGroupOwner(ChangeGroupOwnerRequest request) {
+        return timClient.execute(request);
+    }
+
+    public ImportGroupResponse ImportGroup(ImportGroupRequest request) {
+        return timClient.execute(request);
+    }
+
+    public ImportGroupMsgResponse ImportGroupMsg(ImportGroupMsgRequest request) {
+        return timClient.execute(request);
+    }
+
+    public ImportGroupMemberResponse ImportGroupMember(ImportGroupMemberRequest request) {
+        return timClient.execute(request);
+    }
+
+    public SetUnreadMsgNumResponse SetUnreadMsgNum(SetUnreadMsgNumRequest request) {
+        return timClient.execute(request);
+    }
+
+    public DeleteGroupMsgBySenderResponse DeleteGroupMsgBySender(DeleteGroupMsgBySenderRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GroupMsgGetSimpleResponse groupMsgGetSimple(GroupMsgGetSimpleRequest request) {
+        return timClient.execute(request);
+    }
+
+
     public SendGroupMsgResponse SendGroupMsg(SendGroupMsgRequest request) {
+        return timClient.execute(request);
+    }
+
+
+    public DirtyWordsGetResponse dirtyWordsGet(DirtyWordsGetRequest request) {
+        return timClient.execute(request);
+    }
+
+    public DirtyWordsAddResponse dirtyWordsAdd(DirtyWordsAddRequest request) {
+        return timClient.execute(request);
+    }
+
+    public DirtyWordsDeleteResponse dirtyWordsDelete(DirtyWordsDeleteRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GetHistoryResponse getHistory(GetHistoryRequest request) {
+        return timClient.execute(request);
+    }
+
+    public QueryStateResponse queryState(QueryStateRequest request) {
+        return timClient.execute(request);
+    }
+
+    public SetNoSpeakingResponse setNoSpeaking(SetNoSpeakingRequest request) {
+        return timClient.execute(request);
+    }
+
+    public GetNoSpeakingResponse getNoSpeaking(GetNoSpeakingRequest request) {
         return timClient.execute(request);
     }
 }

@@ -3,7 +3,7 @@ package fun.zhaoxi.tim.models.openmsg;
 import lombok.Data;
 
 @Data
-public class FetchHistoryFile {
+public class HistoryFile {
     /**
      * 消息记录文件下载地址
      */
@@ -28,5 +28,4 @@ public class FetchHistoryFile {
      * GZip 压缩后的文件 MD5
      */
     private String GzipMD5;
-
 }

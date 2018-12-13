@@ -33,7 +33,7 @@ public class TIMSdkExServiceImpl implements TIMSdkExService {
         model.setTag("Tag_Profile_Custom_UserId");
         model.setValue(tagProfileCustomUserId);
         request.setProfileItem(new ProfileitemModel[]{model});
-        PortraitSetResponse response = timSdkService.PortraitSet(request);
+        PortraitSetResponse response = timSdkService.portraitSet(request);
         return response.getSuccess();
     }
 
@@ -47,7 +47,7 @@ public class TIMSdkExServiceImpl implements TIMSdkExService {
         model.setTo_Account(friendIdentifier);
         model.setRemark(friendRemark);
         request.setAddFriendItem(new AddFriendItemModel[]{model});
-        FriendAddResponse response = timSdkService.FriendAdd(request);
+        FriendAddResponse response = timSdkService.friendAdd(request);
         return response.getSuccess();
     }
 
@@ -60,7 +60,7 @@ public class TIMSdkExServiceImpl implements TIMSdkExService {
         snsItemModel.setValue(tagSNSCustomMsgFlag);
         model.setSnsItem(new SnsItemModel[]{snsItemModel});
         request.setUpdateItem(new UpdateItemModel[]{model});
-        FriendUpdateResponse response = timSdkService.FriendUpdate(request);
+        FriendUpdateResponse response = timSdkService.friendUpdate(request);
         return response.getSuccess();
     }
 
@@ -134,7 +134,7 @@ public class TIMSdkExServiceImpl implements TIMSdkExService {
         snsItemModel.setValue(msgFlg == 0 ? "AcceptAndNotify" : (msgFlg == 1 ? "Discard" : "AcceptNotNotify"));
         snsItemModel.setTag("Tag_SNS_Custom_MsgFlag");
         model.setSnsItem(new SnsItemModel[]{snsItemModel});
-        FriendUpdateResponse response = timSdkService.FriendUpdate(request);
+        FriendUpdateResponse response = timSdkService.friendUpdate(request);
         return response.getSuccess();
     }
 }

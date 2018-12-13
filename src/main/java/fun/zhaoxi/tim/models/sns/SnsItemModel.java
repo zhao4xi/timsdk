@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class SnsItemModel {
     public String Tag ;
-    public String Value ;
+    public Object Value ;
 }

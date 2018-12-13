@@ -1,54 +1,81 @@
 package fun.zhaoxi.tim;
 
+import fun.zhaoxi.tim.models.openconfig.*;
 import fun.zhaoxi.tim.models.opengroup.*;
 import fun.zhaoxi.tim.models.openim.*;
+import fun.zhaoxi.tim.models.openimdirtywords.*;
 import fun.zhaoxi.tim.models.openlogin.*;
+import fun.zhaoxi.tim.models.openmsg.*;
 import fun.zhaoxi.tim.models.profile.*;
 import fun.zhaoxi.tim.models.sns.*;
 
-import java.io.IOException;
 
 public interface TIMSdkService {
 
     String GenerateSig(String userID);
 
-    GetGroupInfoResponse GetGroupInfo(GetGroupInfoRequest request) ;
-
-    ImportGroupMemberResponse ImportGroupMember(ImportGroupMemberRequest request) ;
-
-    BatchSendMsgResponse BatchSendMsg(BatchSendMsgRequest request);
-
-    SendMsgResponse SendMsg(SendMsgRequest request) throws IOException;
-
     AccountImportResponse AccountImport(AccountImportRequest request);
-
-    PortraitSetResponse PortraitSet(PortraitSetRequest request);
-
-    FriendUpdateResponse FriendUpdate(FriendUpdateRequest request);
-
-    FriendDeleteResponse FriendDelete(FriendDeleteRequest request);
-
-    ModifyGroupBaseInfoResponse ModifyGroupBaseInfo(ModifyGroupBaseInfoRequest request);
-
     AccountMultiImportResponse MultiAccountImport(AccountMultiImportRequest request);
-
     AccountExpiredResponse AccountExpired(AccountExpiredRequest request) ;
 
+    SendMsgResponse SendMsg(SendMsgRequest request);
+    BatchSendMsgResponse BatchSendMsg(BatchSendMsgRequest request);
+    ImportMsgResponse ImportMsg(ImportMsgRequest request);
+
+    GetAppIdGroupListResponse GroupGetListByAppId(GetAppIdGroupListRequest request);
     GroupCreateResponse GroupCreate(GroupCreateRequest request);
-
-    GroupDestroyResponse GroupDestroy(GroupDestroyRequest request);
-
-    GroupAddMemberResponse GrouAddMember(GroupAddMemberRequest request);
-
-    FriendAddResponse FriendAdd(FriendAddRequest request);
-
+    GetGroupInfoResponse GetGroupInfo(GetGroupInfoRequest request) ;
+    GetGroupMemberInfoResponse GetGroupMemberInfo(GetGroupMemberInfoRequest request);
+    ModifyGroupBaseInfoResponse ModifyGroupBaseInfo(ModifyGroupBaseInfoRequest request);
     GroupAddMemberResponse GroupAddMember(GroupAddMemberRequest request);
-
-    ModifyGroupMemberInfoResponse ModifyGroupMemberInfo(ModifyGroupMemberInfoRequest request);
-
     GroupDeleteMemberResponse GroupDeleteMember(GroupDeleteMemberRequest request);
-
-    SendGroupSystemNotificationResponse SendGroupSystemNotification(SendGroupSystemNotificationRequest request);
-
+    ModifyGroupMemberInfoResponse ModifyGroupMemberInfo(ModifyGroupMemberInfoRequest request);
+    GroupDestroyResponse GroupDestroy(GroupDestroyRequest request);
+    GetJoinedGroupListResponse GetJoinedGroupList(GetJoinedGroupListRequest request);
+    GetRoleInGroupResponse GetRoleInGroup(GetRoleInGroupRequest request);
+    ForbidSendMsgResponse ForbidSendMsg(ForbidSendMsgRequest request);
+    GetGroupShuttedUinResponse GetGroupShuttedUin(GetGroupShuttedUinRequest request);
     SendGroupMsgResponse SendGroupMsg(SendGroupMsgRequest request);
+    SendGroupSystemNotificationResponse SendGroupSystemNotification(SendGroupSystemNotificationRequest request);
+    ChangeGroupOwnerResponse ChangeGroupOwner(ChangeGroupOwnerRequest request);
+    ImportGroupResponse ImportGroup(ImportGroupRequest request) ;
+    ImportGroupMsgResponse ImportGroupMsg(ImportGroupMsgRequest request) ;
+    ImportGroupMemberResponse ImportGroupMember(ImportGroupMemberRequest request) ;
+    SetUnreadMsgNumResponse SetUnreadMsgNum(SetUnreadMsgNumRequest request) ;
+    DeleteGroupMsgBySenderResponse DeleteGroupMsgBySender(DeleteGroupMsgBySenderRequest request) ;
+    GroupMsgGetSimpleResponse groupMsgGetSimple(GroupMsgGetSimpleRequest request) ;
+
+
+    PortraitSetResponse portraitSet(PortraitSetRequest request);
+    PortraitGetResponse portraitGet(PortraitGetRequest request);
+
+
+    FriendAddResponse friendAdd(FriendAddRequest request);
+    FriendImportResponse friendImport(FriendImportRequest request);
+    FriendDeleteResponse friendDelete(FriendDeleteRequest request);
+    FriendDeleteAllResponse friendDeleteAll(FriendDeleteAllRequest request);
+    FriendCheckResponse friendCheck(FriendCheckRequest request);
+    FriendGetAllResponse friendGetAll(FriendGetAllRequest request);
+    FriendGetListResponse friendGetList(FriendGetListRequest request);
+    BlackListAddResponse blackListAdd(BlackListAddRequest request);
+    BlackListDeleteResponse blackListDelete(BlackListDeleteRequest request);
+    BlackListGetResponse blackListGet(BlackListGetRequest request);
+    BlackListCheckResponse blackListCheck(BlackListCheckRequest request);
+    GroupAddResponse groupAdd(GroupAddRequest request);
+    GroupDeleteResponse groupDelete(GroupDeleteRequest request);
+    FriendUpdateResponse friendUpdate(FriendUpdateRequest request);
+
+
+    DirtyWordsGetResponse dirtyWordsGet(DirtyWordsGetRequest request);
+    DirtyWordsAddResponse dirtyWordsAdd(DirtyWordsAddRequest request);
+    DirtyWordsDeleteResponse dirtyWordsDelete(DirtyWordsDeleteRequest request);
+
+
+    GetHistoryResponse getHistory(GetHistoryRequest request);
+
+    QueryStateResponse queryState(QueryStateRequest request);
+
+    SetNoSpeakingResponse setNoSpeaking(SetNoSpeakingRequest request);
+    GetNoSpeakingResponse getNoSpeaking(GetNoSpeakingRequest request);
+
 }

@@ -34,5 +34,4 @@ public class TIMBooter {
         GetGroupInfoResponse response = timSdkService.GetGroupInfo(request);
 
     }
-
 }
