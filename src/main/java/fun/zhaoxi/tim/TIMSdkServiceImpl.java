@@ -20,7 +20,7 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         timClient = new DefaultTIMClient(sdkConfig);
     }
 
-    public String GenerateSig(String userID) {
+    public String generateSig(String userID) {
         tls_sigature.GenTLSSignatureResult sign = tls_sigature.GenTLSSignatureEx(sdkConfig.getSdkAppId(), userID, sdkConfig.getPrivateKey());
         if (sign.errMessage == null || sign.errMessage.equals(""))
             return sign.urlSig;
@@ -36,19 +36,19 @@ public class TIMSdkServiceImpl implements TIMSdkService {
     }
 
 
-    public BatchSendMsgResponse BatchSendMsg(BatchSendMsgRequest request) {
+    public BatchSendMsgResponse batchSendMsg(BatchSendMsgRequest request) {
         return timClient.execute(request);
     }
 
-    public ImportMsgResponse ImportMsg(ImportMsgRequest request) {
+    public ImportMsgResponse importMsg(ImportMsgRequest request) {
         return timClient.execute(request);
     }
 
-    public SendMsgResponse SendMsg(SendMsgRequest request) {
+    public SendMsgResponse sendMsg(SendMsgRequest request) {
         return timClient.execute(request);
     }
 
-    public AccountImportResponse AccountImport(AccountImportRequest request) {
+    public AccountImportResponse accountImport(AccountImportRequest request) {
         return timClient.execute(request);
     }
 
@@ -73,11 +73,11 @@ public class TIMSdkServiceImpl implements TIMSdkService {
 
     }
 
-    public AccountMultiImportResponse MultiAccountImport(AccountMultiImportRequest request) {
+    public AccountMultiImportResponse multiAccountImport(AccountMultiImportRequest request) {
         return timClient.execute(request);
     }
 
-    public AccountExpiredResponse AccountExpired(AccountExpiredRequest request) {
+    public AccountExpiredResponse accountExpired(AccountExpiredRequest request) {
         return timClient.execute(request);
     }
 

@@ -12,15 +12,15 @@ import fun.zhaoxi.tim.models.sns.*;
 
 public interface TIMSdkService {
 
-    String GenerateSig(String userID);
+    String generateSig(String userID);
 
-    AccountImportResponse AccountImport(AccountImportRequest request);
-    AccountMultiImportResponse MultiAccountImport(AccountMultiImportRequest request);
-    AccountExpiredResponse AccountExpired(AccountExpiredRequest request) ;
+    AccountImportResponse accountImport(AccountImportRequest request);
+    AccountMultiImportResponse multiAccountImport(AccountMultiImportRequest request);
+    AccountExpiredResponse accountExpired(AccountExpiredRequest request) ;
 
-    SendMsgResponse SendMsg(SendMsgRequest request);
-    BatchSendMsgResponse BatchSendMsg(BatchSendMsgRequest request);
-    ImportMsgResponse ImportMsg(ImportMsgRequest request);
+    SendMsgResponse sendMsg(SendMsgRequest request);
+    BatchSendMsgResponse batchSendMsg(BatchSendMsgRequest request);
+    ImportMsgResponse importMsg(ImportMsgRequest request);
 
     GetAppIdGroupListResponse GroupGetListByAppId(GetAppIdGroupListRequest request);
     GroupCreateResponse GroupCreate(GroupCreateRequest request);

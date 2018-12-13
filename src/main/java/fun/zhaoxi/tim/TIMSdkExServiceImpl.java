@@ -22,7 +22,7 @@ public class TIMSdkExServiceImpl implements TIMSdkExService {
         request.setFaceUrl(faceUrl);
         request.setNick(nickName);
         request.setIdentifier(identifier);
-        AccountImportResponse response = timSdkService.AccountImport(request);
+        AccountImportResponse response = timSdkService.accountImport(request);
         return response.getSuccess();
     }
 
