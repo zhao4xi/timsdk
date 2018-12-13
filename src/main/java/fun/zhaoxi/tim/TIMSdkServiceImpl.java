@@ -20,11 +20,11 @@ public class TIMSdkServiceImpl implements TIMSdkService {
         timClient = new DefaultTIMClient(sdkConfig);
     }
 
-    public String generateSig(String userID) {
-        tls_sigature.GenTLSSignatureResult sign = tls_sigature.GenTLSSignatureEx(sdkConfig.getSdkAppId(), userID, sdkConfig.getPrivateKey());
+    public String generateSig(String identifier) {
+        tls_sigature.GenTLSSignatureResult sign = tls_sigature.GenTLSSignatureEx(sdkConfig.getSdkAppId(), identifier, sdkConfig.getPrivateKey());
         if (sign.errMessage == null || sign.errMessage.equals(""))
             return sign.urlSig;
-        throw new TIMSdkException("签名错误, AppId:" + sdkConfig.getSdkAppId() + " userId:" + userID);
+        throw new TIMSdkException("签名错误, AppId:" + sdkConfig.getSdkAppId() + " userId:" + identifier);
     }
 
     public GetGroupInfoResponse GetGroupInfo(GetGroupInfoRequest request) {

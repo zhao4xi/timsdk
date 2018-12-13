@@ -12,7 +12,7 @@ import fun.zhaoxi.tim.models.sns.*;
 
 public interface TIMSdkService {
 
-    String generateSig(String userID);
+    String generateSig(String identifier);
 
     AccountImportResponse accountImport(AccountImportRequest request);
     AccountMultiImportResponse multiAccountImport(AccountMultiImportRequest request);
